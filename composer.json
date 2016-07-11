@@ -1,0 +1,24 @@
+{
+  "name": "drunken-kungfu/pagekit-template-generator",
+  "version": "0.0.1",
+  "type": "pagekit-extension",
+  "title": "Pagekit Module Boilerplate",
+  "description": "",
+  "license": "GNU",
+  "authors": [
+    {
+      "name": "Chris Gregory",
+      "email": "crwgregory@gmail.com",
+      "homepage": "crwgregory.com"
+    }
+  ],
+  "extra": {
+      "icon": "app/system/assets/images/placeholder-icon.svg"
+  },
+  "archive": {
+      "exclude": ["node_modules", "!/app"]
+  },
+  "require": {
+    
+  }
+}

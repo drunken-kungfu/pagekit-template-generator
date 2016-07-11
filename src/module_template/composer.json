@@ -1,0 +1,24 @@
+{
+  "name": "{{ vendor_name }}/{{ module_name }}",
+  "version": "0.0.1",
+  "type": "pagekit-extension",
+  "title": "",
+  "description": "",
+  "license": "",
+  "authors": [
+    {
+      "name": "",
+      "email": "",
+      "homepage": ""
+    }
+  ],
+  "extra": {
+    "icon": "app/system/assets/images/placeholder-icon.svg"
+  },
+  "archive": {
+    "exclude": ["node_modules", "!/app"]
+  },
+  "require": {
+
+  }
+}
