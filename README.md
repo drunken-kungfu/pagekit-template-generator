@@ -12,5 +12,5 @@ The generator makes everything needed to start creating a Pagekit extension, fro
 
 `php pagekit generate:extension hello/world`
 
-#### Adding in file permission mode
+#### Adding in file permission mode ( default is 751 )
 `php pagekit generate:extension hello/world 777`
