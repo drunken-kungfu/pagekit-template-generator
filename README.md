@@ -9,6 +9,7 @@ The generator makes everything needed to start creating a Pagekit extension, fro
 
 #### Basic usage
 `php pagekit generate:extension {{ vendor_name }}/{{ module_name }}`
+
 `php pagekit generate:extension hello/world`
 
 #### Adding in file permission mode
