@@ -186,7 +186,7 @@ class Twig
     {
         $str = (string) $mode;
         if (strlen($str) === 3) {
-            return sprintf("%'.04d\n", $str);
+            return intval(sprintf("%'.04d\n", $str));
         } else if (strlen($str) !== 4) {
             return false;
         }
