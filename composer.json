@@ -13,7 +13,7 @@
     }
   ],
   "extra": {
-      "icon": "app/system/assets/images/placeholder-icon.svg"
+      "icon": "icon.svg"
   },
   "archive": {
       "exclude": ["node_modules", "!/app"]

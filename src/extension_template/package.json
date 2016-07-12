@@ -1,5 +1,5 @@
 {
-  "name": "{{ vendor_name }}/{{ module_name }}",
+  "name": "{{ vendor_name_u }} {{ module_name_u }}",
   "version": "0.0.1",
   "description": "",
   "scripts": {

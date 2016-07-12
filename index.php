@@ -14,34 +14,39 @@ return [
   },
 
   'autoload' => [
-    'KungFu\\Boil\\' => 'src'
+    'KungFu\\Generate\\' => 'src'
   ],
 
   'config' => [
 
-    // name => path to render to
     'templates' => [
-      'index.php',
-      'README.md',
-      '.gitignore',
-      'scripts.php',
-      'package.json',
-      'composer.json',
-      'webpack.config.js',
-      'views/index.php',
-      'app/assets/styles/index.css',
-      'app/components/my-component/index.js',
-      'app/components/my-component/index.vue',
-      'app/mixins/mixins.js'
+
+      'extension' => [
+          'index.php',
+          'README.md',
+          '.gitignore',
+          'scripts.php',
+          'package.json',
+          'composer.json',
+          'views/index.php',
+          'webpack.config.js',
+          'app/mixins/mixins.js',
+          'views/admin/index.php',
+          'views/admin/settings.php',
+          'app/assets/styles/index.css',
+          'app/components/my-component/index.js',
+          'app/components/my-component/index.vue'
+      ]
     ],
 
     'structure' => [
-      'views',
-      'src/Controller',
-      'app/components/',
-      'app/components/my-component',
-      'app/mixins/',
-      'app/assets/styles',
+        'views',
+        'views/admin/',
+        'app/mixins/',
+        'src/Controller/',
+        'app/components/',
+        'app/assets/styles/',
+        'app/components/my-component/'
     ]
   ],
 
@@ -49,7 +54,7 @@ return [
 
     'console.init' => function ($event, $console) {
 
-      $namespace = 'KungFu\\Boil\\Commands\\';
+      $namespace = 'KungFu\\Generate\\Commands\\';
 
       foreach (glob(__DIR__ . '/src/Commands/*Command.php') as $file) {
         $class = $namespace . basename($file, '.php');
