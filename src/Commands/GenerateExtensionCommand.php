@@ -3,7 +3,7 @@
 namespace KungFu\Generate\Commands;
 
 
-use KungFu\Generate\Twig;
+use KungFu\Generate\TwigUtility;
 use Pagekit\Application\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -50,13 +50,11 @@ class GenerateExtensionCommand extends Command
             $output->writeln('Namespace must be in the form of \'myvendor/myextension\'');
         } else {
 
-            $twig = new Twig($pieces[0], $pieces[1], $this->argument('mode'), $output);
+            $twig = new TwigUtility($pieces[0], $pieces[1], $this->argument('mode'), $output);
 
-            if ($twig) {
-                $twig->render('extension');
-                $output->writeln('');
-                $output->writeln('Extension created in packages/' . $namespace);
-            }
+            $twig->render('extension');
+            $output->writeln('');
+            $output->writeln('Extension created in packages/' . $namespace);
         }
     }
 }

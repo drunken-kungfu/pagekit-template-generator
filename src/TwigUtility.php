@@ -17,7 +17,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  * Class Twig
  * @package KungFu\Generate
  */
-class Twig
+class TwigUtility
 {
     /**
      * @var \Twig_Environment
@@ -75,7 +75,7 @@ class Twig
         if ($mode && !$this->mode = $this->formatMode($mode)) {
             $output->writeln('Could not format mode: ' . $mode);
             $output->writeln('Mode must be in the form of \'0ddd\' or \'ddd\' where \'d\' is a digit.');
-            return false;
+            die;
         }
 
         $this->packageDir = App::get('path.packages');
@@ -95,7 +95,9 @@ class Twig
 
         $this->modulePath = $this->packageDir . '/' . $this->twigVariables['vendor_name'] . '/' . $this->twigVariables['module_name'];
 
-        return $this->buildFileStructure();
+        if (!$this->buildFileStructure()) {
+            die;
+        }
     }
 
 
