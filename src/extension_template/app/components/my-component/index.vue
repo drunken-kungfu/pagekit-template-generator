@@ -6,6 +6,6 @@
 </template>
 <script>
   module.exports = {
-    mixins: ['./../../mixins/mixins.js']
+    mixins: [require('./../../mixins/mixins.js')]
   }
 </script>
