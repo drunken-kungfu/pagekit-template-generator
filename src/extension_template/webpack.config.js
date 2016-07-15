@@ -9,8 +9,8 @@ module.exports = [
     output: {
       path: path.join(__dirname, 'app/bundle'),
       publicPath: 'scripts/',
-      filename: '[name].bundle.js',
-      chunkFilename: '[id].bundle.js'
+      filename: '[name].js',
+      chunkFilename: '[id].js'
     },
 
     module: {

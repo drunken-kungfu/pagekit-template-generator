@@ -1,5 +1,5 @@
 
-<?php $view->script('index', '{{ module_name }}:app/bundle/index.bundle.js', ['vue']); ?>
+<?php $view->script('index', '{{ module_name }}:app/bundle/index.js', ['vue']); ?>
 <?php $view->style('analyze-css', '{{ module_name }}:app/assets/styles/index.css'); ?>
 
 <div id="{{ module_name }}">
