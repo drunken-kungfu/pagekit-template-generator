@@ -51,7 +51,7 @@ return [
             'name' => '@{{ module_name }}',
 
             // Label to display in the backend
-            'label' => '{{ module_name_u }}',
+            'label' => '{{ module_name_pretty }}',
 
             // The controller for this node. Each controller action will be mounted
             'controller' => '{{ vendor_name_u }}\\{{ module_name_u }}\\Controller\\{{ module_name_u }}Controller',
@@ -59,7 +59,7 @@ return [
             // Optional: Prevent node from being removed. Will end up in "not linked" menu instead
             'protected' => true,
 
-            'fontpage' => true
+            'frontpage' => true
         ]
 
     ],
@@ -103,7 +103,7 @@ return [
         '{{ module_name }}' => [
 
             // Label to display
-            'label'  => '{{ module_name_u }}',
+            'label'  => '{{ module_name_pretty }}',
 
             // Icon to display
             'icon'   => 'app/system/assets/images/placeholder-icon.svg',
@@ -127,14 +127,14 @@ return [
             'parent' => '{{ module_name }}',
 
             // See above
-            'label' => '{{ module_name_u }}',
+            'label' => '{{ module_name_pretty }}',
             'url' => '@{{ module_name }}/admin'
             // 'access' => '{{ name }}: manage hellos'
         ],
 
         '{{ module_name }}: settings' => [
             'parent' => '{{ module_name }}',
-            'label' => '{{ module_name_u }} Settings',
+            'label' => '{{ module_name_pretty }} Settings',
             'url' => '@{{ module_name }}/settings',
             'access' => 'system: manage settings'
         ]
@@ -143,7 +143,7 @@ return [
     /*
      * Link to a settings screen from the extensions listing.
      */
-    'settings' => '@{{ name }}/admin/settings',
+    'settings' => '@{{ module_name }}/admin/settings',
 
     /*
      * Default module configuration.

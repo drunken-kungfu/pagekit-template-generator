@@ -8,14 +8,13 @@ use Pagekit\Application as App;
 class {{ module_name_u }}Controller
 {
     /**
-     * @Route("/")
-     * @Method("GET")
+     * @Route("/", methods="GET")
      */
     function indexAction()
     {
         return [
             '$view' => [
-                'title' => __('{{ module_name_u }}'),
+                'title' => __('{{ module_name_pretty }}'),
                 'name' => '{{ module_name }}:views/index.php'
             ],
             '$data' => [
@@ -25,15 +24,14 @@ class {{ module_name_u }}Controller
     }
 
     /**
-     * @Route("/admin")
-     * @Method("GET")
+     * @Route("/admin", methods="GET")
      * @Access( admin = true )
      */
     function adminAction()
     {
         return [
             '$view' => [
-                'title' => __('{{ module_name_u }}'),
+                'title' => __('{{ module_name_pretty }}'),
                 'name' => '{{ module_name }}:views/admin/index.php'
             ],
             '$data' => [
@@ -43,15 +41,14 @@ class {{ module_name_u }}Controller
     }
 
     /**
-     * @Route("/settings")
-     * @Method("GET")
+     * @Route("/settings", methods="GET")
      * @Access( admin = true )
      */
     function settingsAction()
     {
         return [
             '$view' => [
-                'title' => __('{{ module_name_u }} Settings'),
+                'title' => __('{{ module_name_pretty }} Settings'),
                 'name' => '{{ module_name }}:views/admin/settings.php'
             ],
             '$data' => [

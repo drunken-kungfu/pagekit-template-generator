@@ -2,7 +2,7 @@
   "name": "{{ vendor_name }}/{{ module_name }}",
   "version": "0.0.1",
   "type": "pagekit-extension",
-  "title": "{{ module_name_u }}",
+  "title": "{{ module_name_pretty }}",
   "description": "",
   "license": "",
   "authors": [

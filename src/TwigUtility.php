@@ -86,11 +86,16 @@ class TwigUtility
         $undercase = strtolower($this->moduleName);
         $vendorName = strtolower($this->vendorName);
 
+        $modSplit = explode('-', $undercase);
+        $venSplit = explode('-', $vendorName);
+
         $this->twigVariables = [
             'module_name' => $undercase,
             'vendor_name' => $this->vendorName,
-            'module_name_u' => ucfirst($undercase),
-            'vendor_name_u' => ucfirst($vendorName)
+            'module_name_u' => join('', array_map('ucfirst', $modSplit)),
+            'vendor_name_u' => join('', array_map('ucfirst', $venSplit)),
+            'module_name_pretty' => join(' ', array_map('ucfirst', $modSplit)),
+            'vendor_name_pretty' => join(' ', array_map('ucfirst', $venSplit))
         ];
 
         $this->modulePath = $this->packageDir . '/' . $this->twigVariables['vendor_name'] . '/' . $this->twigVariables['module_name'];
