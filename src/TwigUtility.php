@@ -57,7 +57,7 @@ class TwigUtility
     /**
      * @var int|string
      */
-    protected $mode = 0751;
+    protected $mode = 0775;
 
     /**
      * Twig constructor.
@@ -74,7 +74,7 @@ class TwigUtility
 
         if ($mode && !$this->mode = $this->formatMode($mode)) {
             $output->writeln('Could not format mode: ' . $mode);
-            $output->writeln('Mode must be in the form of \'0ddd\' or \'ddd\' where \'d\' is a digit.');
+            $output->writeln('Mode must be in the form of \'0ddd\' where \'d\' is a digit.');
             die;
         }
 

@@ -33,7 +33,7 @@ class GenerateExtensionCommand extends Command
     protected function configure()
     {
         $this->addArgument('namespace', InputArgument::REQUIRED, 'Namespace e.g. \'myvendor/myextension\'');
-        $this->addArgument('mode', InputArgument::OPTIONAL, 'The mode to set the new directories to. Default is 0751. ( does not apply to Windows )');
+        $this->addArgument('mode', InputArgument::OPTIONAL, 'The mode to set the new directories to. Default is 0775. ( does not apply to Windows )');
     }
 
     /**
